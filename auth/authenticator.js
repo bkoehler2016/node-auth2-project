@@ -7,7 +7,7 @@ const secrets = require('../api/secrets.js');
 //export function that verifies the token for the client
 module.exports = (req, res, next) => {
     //set up the token object based on the requested authorization
-    const token = req.headers.authorization;
+    const token = req.headers.authorization.split(" ")[1];
 
     //set secret to the jsonwebtoken secret
     const secret = secrets.jwtSecret;
