@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
     const token = req.headers.authorization.split(" ")[1];
 
     //set secret to the jsonwebtoken secret
-    const secret = secrets.jwtSecret;
+    const secret = secrets.jwtSecret; 
 
     //verify the token
     if(token) {
